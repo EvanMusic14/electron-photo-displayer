@@ -3,12 +3,13 @@ const { app, BrowserWindow } = require('electron')
 function createWindow() {
     // Create the browser window.
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: true
         }
     })
+
+    win.maximize();
 
     //load the index.html from a url
     win.loadURL('http://localhost:3000');
